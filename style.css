@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.input-group {
+  margin: 32px 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.input-annotate {
+  font-style: italic;
+  color: #909090;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#input-alert {
+  color: #da6c6c;
+  display: none;
+}
+
+.text-area {
+  min-height: 300px;
+}
+
+.text-area,
+input[type="number"] {
+  background-color: #f1f2f3;
+  font-size: 24px;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.title,
+.text-area,
+input[type="number"] {
+  color: #393e46;
+}
