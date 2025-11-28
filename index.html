@@ -10,20 +10,10 @@
     <div class="wrapper">
       <h1 class="title">Number to Text</h1>
       <div class="input-group">
-        <input
-          id="input-number"
-          class="input-number"
-          type="number"
-          name="inputNumber"
-          min="1"
-          max="999"
-          placeholder="enter a number"
-        />
+        <input id="input-number" class="input-number" type="number" name="inputNumber" placeholder="enter a number" />
         <div class="input-annotate">
-          <span>* 1 → 999</span>
-          <span id="input-alert"
-            >Vui lòng nhập giá trị từ <b>1</b> đến <b>999</b>!
-          </span>
+          <span id="input-formatted"></span>
+          <span id="input-alert">Min: <b>1</b> - Max: <b>1e12</b></span>
         </div>
       </div>
       <div class="text-area" id="text-area"></div>

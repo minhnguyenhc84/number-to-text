@@ -1,6 +1,7 @@
-import { readThreeDigits } from "./utils.js";
+import { readNumber } from "./utils.js";
 
 const input = document.getElementById("input-number");
+const inputFormatted = document.getElementById("input-formatted");
 const alert = document.getElementById("input-alert");
 const textArea = document.getElementById("text-area");
 
@@ -8,14 +9,17 @@ input.addEventListener("input", function () {
   input.value = input.value.replace(/\D/g, ""); // loại bỏ các ký tự không phải số
 
   const value = Number(input.value);
-  let text = null;
+  const min = 1;
+  const max = 1e12 - 1;
+  let text = "";
 
-  if (isNaN(value) || value < 1 || value > 999) {
+  if (isNaN(value) || value < min || value > max) {
     alert.style.display = "block";
   } else {
     alert.style.display = "none";
-    text = readThreeDigits(value);
+    text = readNumber(value);
   }
 
   textArea.textContent = text;
+  inputFormatted.textContent = `* ${value.toLocaleString("vi-VN")}`;
 });
